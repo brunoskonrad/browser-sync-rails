@@ -1,6 +1,9 @@
+require 'browser_sync_rails/runner'
+
 namespace :browser_sync do
   desc "Starts browser sync"
   task :start do
-    sh "browser-sync start --proxy localhost:3000 --files 'app/assets, app/views'"
+    runner = BrowserSyncRails::Runner.new
+    sh runner.cli_command
   end
 end

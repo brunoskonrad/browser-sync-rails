@@ -7,7 +7,9 @@ namespace :browser_sync do
     path = Rails.root.join('config', 'browser_sync.yml')
 
     options = if File.exist? path
-      YAML.load_file(path).symbolize_keys
+      config = YAML.load_file(path)
+      config = {} unless config
+      config.symbolize_keys
     else
       {}
     end

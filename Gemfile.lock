@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    browser_sync_rails (0.1.0)
-      rails (~> 4.2.6)
+    browser_sync_rails (0.1.1)
+      rails
 
 GEM
   remote: https://rubygems.org/

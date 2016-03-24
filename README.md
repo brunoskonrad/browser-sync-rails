@@ -34,6 +34,36 @@ Run this rake task to start it:
 bundle exec rake browser_sync:start
 ```
 
+## Configurations
+
+By default this gem watch for `app/assets` and `app/views`. You can also add more files to watch or change the host or port.
+
+It is done in `config/browser_sync.yml`. Check a config file sample:
+
+```yaml
+# default is: localhost
+host: 'some host'
+
+# default is: 3000
+port: 1234
+
+# either watch this files along with `app/assets` and `app/views`
+files:
+  - 'some/file/**/*.css'
+```
+
+## Problems?
+
+If something goes wrong with your setup, because of a NPM permission, you'll need to install browser-sync by yourself:
+
+```sh
+sudo npm install -g browser-sync
+```
+
+------
+
+Any others, please create a issue about.
+
 ## Contributing
 
 Feel free to open a Pull Request or open issues. 😄

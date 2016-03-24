@@ -9,12 +9,12 @@ Gem::Specification.new do |s|
   s.version     = BrowserSyncRails::VERSION
   s.authors     = ["Bruno Konrad"]
   s.email       = ["bruno.skon@gmail.com"]
-  s.homepage    = "https://google.com"
-  s.summary     = "Nothing"
+  s.homepage    = "https://github.com/brunoskonrad/browser-sync-rails"
+  s.summary     = "Use browser sync with rails"
   s.description = "Add Browser Sync into a rails app"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.6"

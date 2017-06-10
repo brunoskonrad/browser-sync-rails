@@ -18,6 +18,21 @@ module BrowserSyncRails
         end
 
         create_file "config/browser_sync.yml"
+        create_file "config/browser_sync.js" do
+%q[
+module.exports = {
+    snippetOptions: {
+        rule: {
+            match: /<\/head>/i,
+            fn: function (snippet, match) {
+              return snippet + match;
+            }
+        }
+    }
+}
+]
+        end
+
       end
 
       private
